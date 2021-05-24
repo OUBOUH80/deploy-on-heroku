@@ -1,55 +1,66 @@
-<h1>The Promised Neverland</h1>
-<table>
-  <tr>
-    <th>image</th>
-    <th>name</th>
-    <th>caracteristique</th>
-  </tr>
-  <tr>
-    <td><img src="./../assets/Emma.gif" width="100px" /></td>
-    <td>EMMA</td>
-    <td>Talented</td>
-  </tr>
-  <tr>
-    <td><img src="./../assets/Norman.gif" width="100px" /></td>
-    <td>Norman</td>
-    <td>Smart</td>
-  </tr>
-  <tr>
-    <td><img src="./../assets/Ray.gif" width="100px" /></td>
-    <td>Ray</td>
-    <td>Intellectual</td>
-  </tr>
-</table>
-
-<div>
-  <!-- this header tag displays only when user is logged-in -->
-  <h1 *ngIf="authService.user | async">
-    Welcome User: {{ (authService.user | async)?.email }}!
-  </h1>
-
-  <!-- this div displays only when user is not logged-in -->
-  <div *ngIf="!(authService.user | async)">
-    <!-- these input fields takes email and password from user -->
-    <input type="text" [(ngModel)]="email" placeholder="Enter email"/>
-    <input type="password" [(ngModel)]="password" placeholder="Enter password"/>
-
-    <!-- user click this button to signup -->
-    <button (click)="signup()" [disabled]="!email || !password">
-      Signup
-    </button>
-
-    <!-- user click this button to login -->
-    <button (click)="login()" [disabled]="!email || !password">
-      Login
-    </button>
+<body>
+  <div class="titleTable">
+  <h1>One Piece</h1>
+  <table>
+    <tr>
+      <th>image</th>
+      <th>name</th>
+    </tr>
+    <tr>
+      <td><img src="./../assets/monkey_d_luffy_22.jpg" width="100px" /></td>
+      <td>Luffy</td>
+    </tr>
+    <tr>
+      <td><img src="./../assets/roronoa_zoro_25.jpg" width="100px"/></td>
+      <td>Roronoa Zoro</td>
+    </tr>
+    <tr>
+      <td><img src="./../assets/nami_28.jpg" width="100px" /></td>
+      <td>Nami</td>
+    </tr>
+    <tr>
+      <td><img src="./../assets/sanji_33.jpg" width="100px" /></td>
+      <td>Sanji</td>
+    </tr>
+  </table>
   </div>
-
-  <!-- user click this button to logout -->
+  
+  <br /><br />
+  <hr />
+  <br /><br />
+  
+  
+  <div>
+    <!-- this header tag displays only when user is logged-in -->
+    <h1 *ngIf="authService.user | async">
+      Welcome User: {{ (authService.user | async)?.email }}!
+    </h1>
+  
+    <!-- this div displays only when user is not-logged-in -->
+    <div *ngIf="!(authService.user | async)">
+      <!-- these input fields takes email and password from user -->
+      <div class="inputs">
+      <input type="text" [(ngModel)]="email" placeholder="Enter email"/>
+      <input type="password" [(ngModel)]="password" placeholder="Enter password"/>
+      </div>
+      <!-- user click this button to signup -->
+      <button (click)="signup()" [disabled]="!email || !password">
+        Signup
+      </button>
+  
+  
+      <!-- user click this button to login -->
+      <button (click)="login()" [disabled]="!email || !password">
+        Login
+      </button>
+    </div>
+  
+    <!-- user click this button to logout -->
     <!-- this button displays only when user is logged-in -->
     <button (click)="logout()" *ngIf="authService.user | async">
       Logout
     </button>
-</div>
-
-<router-outlet></router-outlet>
+  </div>
+  </body>
+  <router-outlet></router-outlet>
+  

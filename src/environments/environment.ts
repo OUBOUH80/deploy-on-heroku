@@ -4,14 +4,14 @@
 
 export const environment = {
   production: true,
-  firebase : {
-    apiKey: "AIzaSyCa6a7db_ERBgLYPDprojEP5IsN6CcqPpo",
-    authDomain: "mangas-d2885.firebaseapp.com",
-    projectId: "mangas-d2885",
-    storageBucket: "mangas-d2885.appspot.com",
-    messagingSenderId: "357083715599",
-    appId: "1:357083715599:web:01cbd1f8bcafb34a1eab7a",
-    measurementId: "G-Y4YETT4MME"
+  firebase :{
+    apiKey: "AIzaSyCpA8I2fJzTbSpaL8YBrIDdPZKCNaBTvLQ",
+    authDomain: "angular-project-861f3.firebaseapp.com",
+    projectId: "angular-project-861f3",
+    storageBucket: "angular-project-861f3.appspot.com",
+    messagingSenderId: "943627970066",
+    appId: "1:943627970066:web:20322a1932d0a4c1e91acb",
+    measurementId: "G-TLEPY86QHF"
   }
 };
 
